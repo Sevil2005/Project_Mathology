@@ -1,38 +1,220 @@
 <!DOCTYPE html>
 <html>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main2.css') }}">
     <head>
         {% if title %}
             <title>Mathology - {{ title }}</title>
         {% else %}
             <title>Mathology</title>
         {% endif %}
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!--Font awesome-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main2.css') }}">-->
+        <style>
+body {
+  margin-top: 10rem;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #e78200;
+}
+
+.article-metadata.a:hover{
+  color: #fb5155;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+.article-title:hover {
+  color: #fb5155;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.banner-section{
+	position: relative;
+	display: block;
+	background: #fff;
+	padding: 210px 0px 30px 0px;
+}
+
+.banner-section .pattern-layer .pattern-1{
+	position: absolute;
+	top: 0px;
+	width:110%;
+	height: 890px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner-section .pattern-layer .pattern-2{
+	position: absolute;
+	right: -111px;
+	top: 0px;
+	width: 67%;
+	height: 820px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner-section .icon-layer{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	max-width: 1920px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.banner-section .icon-layer .icon{
+	position: absolute;
+}
+
+.banner-section .icon-layer .icon-1{
+	width: 218px;
+	height: 212px;
+	left: 100px;
+	top: 180px;
+	background-repeat: no-repeat;
+}
+
+.banner-section .icon-layer .icon-2{
+	left: 130px;
+	top: 55%;
+	width: 78px;
+	height: 75px;
+	background-repeat: no-repeat;
+}
+
+.banner-section .icon-layer .icon-3{
+	left: 380px;
+	bottom: 100px;
+	width: 123px;
+	height: 119px;
+	background-repeat: no-repeat;
+}
+
+.banner-section .icon-layer .icon-4{
+	left: 45%;
+	top: 60%;
+	width: 78px;
+	height: 75px;
+	background-repeat: no-repeat;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    background: #f8f9fa;
+}
+
+.header-top .top-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1050px;
+    padding: 6px 0;
+}
+
+ul{
+    list-style-type: none;
+    margin-bottom: 0rem;
+}
+
+li{
+    display: inline;
+}
+
+.header-top .top-contact .info .announcement-info a {
+    text-decoration: none;
+    color: #e78200;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+        </style>
     </head>
     <body>
-        <header class="site-header">
-            <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top">
+        <header class="site-header fixed-top">
+            <!--Header-top-->
+            <section class="header-top">
+                <div class="top-contact">
+                    <div class="info">
+                        <ul class="announcement-info">
+                            <li class="mail">
+                                <a href="#"><i class="fa fa-pencil"></i> sevillerasulova@gmail.com</a>
+                            </li>
+                            <li class="info-inner">
+                                <a href="#"><i class="fa fa-user-o"> </i>Login</a>
+                            </li>
+                            <li class="info-inner">
+                                <a href="#"><i class="fa fa-clock-o"></i> Mn-Fr: 8am - 8pm, St-Sn: 8am - 4pm</a>
+                            </li>
+                            <li class="info-inner">
+                                <a href="#"><i class="fa fa-phone"></i>(050)416-76-58</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <nav class="navbar navbar-light bg-light navbar-expand-md">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="https://mail.google.com/mail/u/0?ui=2&ik=2a547c4c1c&attid=0.1&permmsgid=msg-a:r9219216571858713350&th=174e8982e59d394f&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9ADUlE-IXzD4IiE7XJBaJG00NclkGKy50p8c6EUWdhwn-0xUWQpB7Ywx5HuislFVk0J12keKOb7RJaMGMhmfpR4jjs9YeOgPmYDwsmboosRUz0TWBWozGM3nk&disp=emb&realattid=ii_kfs17vqw0" class="d-inline-block align-top" alt="">
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <div class="collapse navbar-collapse" id="navbarToggle">
                         <div class="navbar-nav mr-auto" style="height:60px;">
                             <a class="nav-item nav-link" href="/" style="padding:20px; width:140px;">Ana Səhifə</a>
-                            <a class="nav-item nav-link" href="/about" style="padding:20px;">Haqqımızda</a>
+                            <a class="nav-item nav-link" href="/haqqımızda" style="padding:20px;">Haqqımızda</a>
                             <a class="nav-item nav-link" href="/rfo" style="padding:20px; width:275px;">Respublika Fənn Olimpiadaları</a>
-                            <a class="nav-item nav-link" href="/internationalolimpiads" style="padding:20px; width:240px;">Beynəlxalq Olimpiadalar</a>
-                            <a class="nav-item nav-link" href="/advice" style="padding:20px;">Məsləhətlər</a>
-                            <a class="nav-item nav-link" href="/discussion" style="padding:20px;">Müzakirə</a>
+                            <a class="nav-item nav-link" href="/BeynəlxalqOlimpiadalar" style="padding:20px; width:240px;">Beynəlxalq Olimpiadalar</a>
+                            <a class="nav-item nav-link" href="/məsləhətlər" style="padding:20px;">Məsləhətlər</a>
+                            <a class="nav-item nav-link" href="/müzakirə" style="padding:20px;">Müzakirə</a>
                         </div>
 
                         <!-- Navbar Right Side -->

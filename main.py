@@ -25,23 +25,30 @@ posts = [
 
 
 @app.route('/')
-@app.route('/home')
+@app.route('/AnaSəhifə')
 def home():
     return render_template('home.html')
 
 
-@app.route('/about')
+@app.route('/haqqımızda')
 def about():
-    return render_template('about.html', title="About")
+    return render_template('about.html', title="Haqqımızda")
 
-@app.route('/discussion')
-def disc():
-    return render_template('discussion.html', title="Discussion")
+@app.route('/rfo')
+def rfo():
+    return render_template('advice.html', title="RFO")
 
-@app.route('/advice')
+@app.route('/BeynəlxalqOlimpiadalar')
+def IO():
+    return render_template('advice.html', title="BeynəlxalqOlimpiadalar")
+
+@app.route('/məsləhətlər')
 def advice():
-    return render_template('advice.html', posts=posts, title="Advice")
+    return render_template('advice.html', posts=posts, title="Məsləhətlər")
 
+@app.route('/müzakirə')
+def disc():
+    return render_template('discussion.html', title="Müzakirə")
 
 if __name__ == '__main__':
     app.run(debug = True)

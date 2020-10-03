@@ -6,6 +6,10 @@ body {
   color: #fb5155;
 }
 
+.article-metadata.a:hover{
+  color: #fb5155;
+}
+
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
@@ -23,7 +27,7 @@ body {
 }
 
 .article-title:hover {
-  color: #428bca;
+  color: #fb5155;
   text-decoration: none;
 }
 
