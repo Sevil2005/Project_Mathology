@@ -1,9 +1,9 @@
 body {
-  margin-top: 6.5rem;
+  margin-top: 9rem;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #fb5155;
+  color: #e78200;
 }
 
 .article-metadata.a:hover{
@@ -123,4 +123,36 @@ body {
 	width: 78px;
 	height: 75px;
 	background-repeat: no-repeat;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    background: #f8f9fa;
+}
+
+.header-top .top-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1050px;
+    padding: 6px 0;
+}
+
+ul{
+    list-style-type: none;
+    margin-bottom: 0rem;
+}
+
+li{
+    display: inline;
+}
+
+.header-top .top-contact .info .announcement-info a {
+    text-decoration: none;
+    color: #e78200;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
 }
