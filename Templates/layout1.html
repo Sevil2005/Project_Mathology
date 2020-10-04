@@ -20,7 +20,7 @@
         <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main2.css') }}">-->
         <style>
 body {
-  margin-top: 9rem;
+  margin-top: 10rem;
 }
 
 .site-header .navbar-nav .nav-link:hover {
@@ -48,7 +48,7 @@ body {
 }
 
 .article-title:hover {
-  color: #fb5155;
+  color: #e78200;
   text-decoration: none;
 }
 
@@ -149,7 +149,7 @@ body {
 .header-top {
     width: 100%;
     display: flex;
-    background: #f8f9fa;
+    background: #212529;
 }
 
 .header-top .top-contact {
@@ -161,61 +161,77 @@ body {
     padding: 6px 0;
 }
 
-ul{
-    list-style-type: none;
-    margin-bottom: 0rem;
-}
-
 li{
     display: inline;
 }
 
-.header-top .top-contact .info .announcement-info a {
+li a {
+    color: #e78200;
+}
+
+li a:hover{
+    color: #e78200;
+    opacity:0.5;
+}
+
+.header-top .top-contact .announcement-info a {
     text-decoration: none;
     color: #e78200;
     font-size: 16px;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+.form-inline .info a{
+    border:1.5px solid #e78200;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    color: #e78200;
+    border-radius: 50%;
+}
+
+.header-top .navbar .form-inline .info a:hover{
+    background-color: #343a40;
+    opacity: 0.5;
+}
+
         </style>
     </head>
     <body>
         <header class="site-header fixed-top">
             <!--Header-top-->
-            <section class="header-top">
-                <div class="top-contact">
-                    <div class="info">
-                        <ul class="announcement-info">
-                            <li class="mail">
-                                <a href="#"><i class="fa fa-envelope"></i> sevillerasulova@gmail.com</a>
-                            </li>
-                            <li class="info-inner">
-                                <a href="#"><i class="fa fa-phone"></i>(050)123-45-67</a>
-                            </li>
-                            <li class="info-inner">
-                                <a href="#"><i class="fa fa-user"></i>Login/Register</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <nav class="navbar navbar-dark bg-dark justify-content-between">
+                <li class="mail">
+                    <a href="#"><i class="fa fa-envelope" style="margin-right:5px;"></i> sevillerasulova@gmail.com</a>
+                </li>
+                <li class="getInTouch">
+                    <a href="#"><i class="fa fa-phone" style="margin-right:5px;"></i>(050)123-45-67</a>
+                </li>
+                <li class="log-reg">
+                    <a href="#"><i class="fa fa-user" style="margin-right:5px;"></i>Login/Register</a>
+                </li>
+                <form class="form-inline">
+                    <li class="info" style="margin-right: 10px;">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="info" style="margin-right: 10px;">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="info" style="margin-right: 10px;">
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                </form>
+            </nav>
             <nav class="navbar navbar-light bg-light navbar-expand-lg">
-                <div class="container">
+                <div class="container" style="margin: 0 !important; ">
                     <a class="navbar-brand" href="#">
-                        <img src="https://mail.google.com/mail/u/0?ui=2&ik=2a547c4c1c&attid=0.1&permmsgid=msg-a:r9219216571858713350&th=174e8982e59d394f&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9ADUlE-IXzD4IiE7XJBaJG00NclkGKy50p8c6EUWdhwn-0xUWQpB7Ywx5HuislFVk0J12keKOb7RJaMGMhmfpR4jjs9YeOgPmYDwsmboosRUz0TWBWozGM3nk&disp=emb&realattid=ii_kfs17vqw0" class="d-inline-block align-top" alt="">
-                    </a>
+                        <img src="https://mail.google.com/mail/u/0?ui=2&ik=2a547c4c1c&attid=0.1&permmsgid=msg-a:r9219216571858713350&th=174e8982e59d394f&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-qHqEQ1t3ED2aw_YFZ5KLPMPqZsfNHizRXpGqilrcbRgQh3KGWL-ZBEsDu7iMXAxk4Woe9qPAkKMot8K9LZNHiQJZrslkZfSj0NLMkaHLVw4a7rrY1H_W89Rk&disp=emb&realattid=ii_kfs17vqw0"></a>
                     <div class="collapse navbar-collapse" id="navbarToggle">
                         <div class="navbar-nav mr-auto" style="height:60px;">
-                            <a class="nav-item nav-link" href="/" style="padding:20px; width:140px;">Ana Səhifə</a>
+                            <a class="nav-item nav-link" href="/" style="padding:20px; width:140px;">Ana Səhifə<i class="fa fa-angle-arrow"></i></a>
                             <a class="nav-item nav-link" href="/haqqımızda" style="padding:20px;">Haqqımızda</a>
                             <a class="nav-item nav-link" href="/rfo" style="padding:20px; width:275px;">Respublika Fənn Olimpiadaları</a>
                             <a class="nav-item nav-link" href="/BeynəlxalqOlimpiadalar" style="padding:20px; width:240px;">Beynəlxalq Olimpiadalar</a>
